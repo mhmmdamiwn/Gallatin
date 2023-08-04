@@ -10,6 +10,8 @@
     "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -d ormconfig.ts",
     "typeorm:migration:generate": "npm run typeorm -- migration:generate ./src/migrations/migrations/$npm_config_name",
     "typeorm:migration:run": "npm run typeorm -- migration:run",
+    "docker-compose-up": "docker-compose up -d",
+    "docker-compose-down": "docker-compose down",
     "build": "nest build",
     "start:dev": "nodemon --config nodemon.json",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
