@@ -1,8 +1,22 @@
-if you changed any database schema, run this command to generate the new migration files based on changes :
-> npm run typeorm:migration:generate
+# Gallatin
+A gRPC server built using Node.js,Nest.js, PostgreSQL and typeorm
 
-if you want to apply the changes in to your database, run :
-> npm run typeorm:migration:run
+Install the dependencies :
+```
+ npm install
+```
 
-for starting the app, run :
-> npm run start:dev
+for re-generating the migration files in case of any changes in database : 
+```
+npm run typeorm:migration:generate
+```
+
+for running the migrations :
+```
+npm run typeorm:migration:run
+```
+
+Run the application :
+```
+npm run start:dev
+```
