@@ -21,7 +21,7 @@ class ConfigService {
   }
 
   public getPort() {
-    return this.getValue('PORT', true);
+    return this.getValue('PORT', true); // get the port for starting application
   }
 
   public getTypeOrmConfig(): TypeOrmModuleOptions {
@@ -43,6 +43,7 @@ class ConfigService {
   }
 }
 const configService = new ConfigService(process.env).ensureValues([
+  // get the information about database from .env file
   'POSTGRES_HOST',
   'POSTGRES_PORT',
   'POSTGRES_USER',

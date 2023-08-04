@@ -1,13 +1,17 @@
 import { Controller } from '@nestjs/common';
 import { GrpcMethod } from '@nestjs/microservices';
-import { TaskId } from './interfaces/TaskId.interface';
-import { Task } from './interfaces/Task.interface';
 import { TaskService } from './task.service';
-import { ResponseMessage } from './interfaces/ResponseMessage.interface';
-import { ResponseTask } from './interfaces/TaskResponse.interface';
-import { PaginationOptions } from './interfaces/PaginationOptions.interface';
-import { Tasks } from './interfaces/Tasks.interface';
-import { TaskInput } from './interfaces/TaskInput.interface';
+
+// interfaces
+import {
+  Task,
+  TaskId,
+  TaskInput,
+  Tasks,
+  ResponseMessage,
+  ResponseTask,
+  PaginationOptions,
+} from './interfaces';
 
 @Controller()
 export class TaskController {

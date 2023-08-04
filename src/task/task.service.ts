@@ -2,11 +2,15 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { TaskEntity } from './model/task.entity';
 import { Repository } from 'typeorm';
-import { ResponseMessage } from './interfaces/ResponseMessage.interface';
-import { ResponseTask } from './interfaces/TaskResponse.interface';
-import { Tasks } from './interfaces/Tasks.interface';
-import { Task } from './interfaces/Task.interface';
-import { TaskInput } from './interfaces/TaskInput.interface';
+
+// interfaces
+import {
+  Task,
+  TaskInput,
+  Tasks,
+  ResponseMessage,
+  ResponseTask,
+} from './interfaces';
 
 @Injectable()
 export class TaskService {
