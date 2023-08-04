@@ -1,0 +1,33 @@
+version: '3.7'
+
+networks:
+  sternx:
+    name: sternx
+
+services:
+  sternx_postgres:
+    container_name: sternx_postgres
+    image: postgres:12
+    networks:
+      - sternx
+    environment:
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_USER: postgres
+      POSTGRES_DB: sternx
+      PG_DATA: /var/lib/postgresql/data
+    volumes:
+      - ./volumes/postgress/data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  sternx_adminer: 
+    container_name: sternx_adminer
+    image: adminer
+    ports:
+      - 8080:8080
+    links:
+      - sternx_postgres
+    depends_on:
+      - sternx_postgres
+    networks:
+      - sternx
